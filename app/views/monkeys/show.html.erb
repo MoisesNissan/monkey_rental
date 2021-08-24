@@ -10,23 +10,30 @@
         </div>
       </div>
 <% end %>
-<div class="container">
-  <div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Name: <%= @monkey.name %></h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Price: $<%= @monkey.price %></li>
-    <li class="list-group-item">Species: <%= @monkey.species %></li>
-    <li class="list-group-item">Age: <%= @monkey.age %></li>
-    <li class="list-group-item">Weight: <%= @monkey.weight %></li>
-    <li class="list-group-item">Address: <%= @monkey.address %></li>
-  </ul>
-  <div class="card-body">
-    <%= link_to 'Back', monkeys_path, class: 'btn btn-primary'%>
-  </div>
-</div>
-  <div class="row my-2">
-
-</div>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-6 rentals-box">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Price: $<%= @monkey.price %></li>
+        <li class="list-group-item">Species: <%= @monkey.species %></li>
+        <li class="list-group-item">Age: <%= @monkey.age %></li>
+        <li class="list-group-item">Weight: <%= @monkey.weight %></li>
+        <li class="list-group-item">Address: <%= @monkey.address %></li>
+      </ul>
+    </div>
+    <div class="col-3 rentals-box container">
+      <div class="rentals-form">
+        <div class="rentals-form-title">
+          <h5 class="space_price">$ <span id="space-price">367</span> per day</h5>
+          <h6>Reserve now!</h6>
+          </div>
+        </div>
+        <div>
+          <form class="simple_form new_rental" id="new_rental" novalidate="novalidate" action="/spaces/7/rentals" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="xKCyWU1kGOy4VKy+P2XABlZfQoo8JY92uuBktA3kj9n6ol/8pXqhdcJgw2Sv18CZQ6c8BwJxLqJp6V8kHoa7Ag==">
+            <div class="form-group date optional rental_start_date flex-select"><label class="form-control-label date optional" for="rental_start_date">Start date</label><div class="d-flex flex-row justify-content-between align-items-center"><input class="form-control mx-1 date optional" type="date" name="rental[start_date]" id="rental_start_date"></div></div>
+            <div class="form-group date optional rental_end_date flex-select"><label class="form-control-label date optional" for="rental_end_date">End date</label><div class="d-flex flex-row justify-content-between align-items-center"><input class="form-control mx-1 date optional" type="date" name="rental[end_date]" id="rental_end_date"></div></div>
+            <input type="submit" name="commit" value="Book" class="btn btn btn-primary" style="margin-bottom: 20px;" data-disable-with="Book">
+          </form>
+        </div>
+      </div>
+    </div>
