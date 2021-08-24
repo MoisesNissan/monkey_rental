@@ -27,7 +27,7 @@ class MonkeysController < ApplicationController
 
   private
 
-  def monkry_params
+  def monkey_params
     params.require(:monkey).permit(:name, :species, :age, :weight, :price, :address, :lat, :lng)
   end
 end
