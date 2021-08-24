@@ -18,7 +18,7 @@ class MonkeysController < ApplicationController
   def create
     @monkey = Monkey.new(monkey_params)
     if @monkey.save
-      redirect_to monkey_path(@monkey)
+      redirect_to monkeys_path
     else
       render :new
     end
@@ -26,7 +26,7 @@ class MonkeysController < ApplicationController
 
   private
 
-  def monkry_params
+  def monkey_params
     params.require(:monkey).permit(:name, :species, :age, :weight, :price, :address, :lat, :lng)
   end
 end
