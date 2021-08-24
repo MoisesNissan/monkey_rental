@@ -1,13 +1,25 @@
-<div class="position-relative">
-  <div class="card-category card-large" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)) %>">
-  <%# , url(<%= @monkey.photo.attached? ? cl_image_path(@monkey.photo.key) : asset_path('monkey_background.jpg') )%>
-    <h1><%= @monkey.name %></h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path @monkey.photo.key %>);">
+  <div class="container">
   </div>
 </div>
-<div class="container mb-5">
-  <div class="d-flex justify-content-between my-4">
-    <div>
-        Add a monkey
-    </div>
+
+
+
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Name: <%= @monkey.name %></h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
   </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Price: $<%= @monkey.price %></li>
+    <li class="list-group-item">Species: <%= @monkey.species %></li>
+    <li class="list-group-item">Age: <%= @monkey.age %></li>
+    <li class="list-group-item">Weight: <%= @monkey.weight %></li>
+    <li class="list-group-item">Address: <%= @monkey.address %></li>
+  </ul>
+  <div class="card-body">
+    <a href="http://localhost:3000/monkeys" class="card-link">Go back</a>
+  </div>
+</div>
   <div class="row my-2">
