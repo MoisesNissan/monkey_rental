@@ -10,16 +10,13 @@
     <h3 class="mb-0">My monkey rentals</h3>
     <%= link_to 'Add a monkey', new_monkey_path, class: 'btn btn-flat' %>
   </div>
-  <div class="row">
-    <% @monkeys.each do |monkey| %>
-      <div class="co-12 colsm-6 col-md-4 mb-3">
-        <%= link_to monkey, class:'text-decoration-none' do %>
-          <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))%>">
-          <%# , url(<%= list.photo.attached? ? cl_image_path(list.photo.key) : asset_path('list_background.jpg') ) %>
-            <%= monkey.name %>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
+<div class="cards">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path @monkey.photo.key %>)">
+  </div>
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path @monkey.photo.key %>)">
+  </div>
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path @monkey.photo.key %>)">
   </div>
 </div>
