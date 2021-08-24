@@ -17,6 +17,7 @@ class MonkeysController < ApplicationController
 
   def create
     @monkey = Monkey.new(monkey_params)
+    @monkey.user = current_user
     if @monkey.save
       redirect_to monkeys_path
     else
