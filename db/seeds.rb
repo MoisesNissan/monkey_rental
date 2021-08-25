@@ -43,7 +43,8 @@ pic_index = 0
     address: Faker::Address.street_address
   )
   file = URI.open(photos[pic_index])
-  monkey.photo.attach(io: file, filename: 'monkey.png', content_type: 'image/png')
+  sleep(5)
+  monkey.photo.attach(io: file, filename: 'monkey.png')
   monkey.save!
   pic_index += 1
 end
