@@ -9,6 +9,7 @@ class MonkeysController < ApplicationController
 
   def show
     @monkey = Monkey.find(params[:id])
+    @rental = Rental.new
   end
 
   def new

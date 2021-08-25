@@ -1,12 +1,14 @@
 class RentalsController < ApplicationController
   def create
     @rental = Rental.new(rental_params)
+    @monkey = Monkey.find(params[:monkey_id])
     @rental.user = current_user
-    @rental.monkey = Monkey.find(params[:monkey_id])
+    @rental.monkey = @monkey
     if @rental.save
-      redirect_to rental_path(@rental)
+      # TODO: SEND TO USER RENTALS or SUCCESS PAGE
+      redirect_to monkeys_path, notice: "Your monkey has been successfully booked!"
     else
-      render :new
+      render "monkeys/show"
     end
   end
 
