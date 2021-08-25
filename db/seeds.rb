@@ -1,4 +1,8 @@
 require "faker"
+
+puts 'Deleting previously created users and monkeys'
+User.destroy_all
+Monkey.destroy_all
 # TODO: Write a seed to insert 100 posts in the database
 puts 'Creating a user...'
 user = User.new(
@@ -16,9 +20,7 @@ puts 'Creating 15 fake monkeys...'
     age: rand(1..20),
     weight: rand(5..30),
     price: rand(150..300),
-    address: Faker::Address.street_address,
-    lat: rand(5..10),
-    lng: rand(5..10)
+    address: Faker::Address.street_address
   )
   monkey.save!
 end
