@@ -1,23 +1,13 @@
-<div class="container, main">
-  <h1>Monkey Rental</h1>
-  <h3>Welcome to Monkey rentals</h3>
-  <p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1574256707097-bbf7d49777f5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW9ua2V5c3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60);">
+  <div class="container">
+  <h1>Monkey Rentals brings <strong>the best monkeys</strong> to <strong>the most cool people</strong>!</h1>
+    <p>Change your life and rent some of the best monkeys around the world.</p>
+    <%= link_to 'Search', monkeys_path, class: 'btn btn-primary btn btn-primary btn-lg'%>
+  </div>
 </div>
-
-<div>
-  <%= link_to 'Monkey Search', monkeys_path, class: 'btn btn-primary'%>
-</div>
-
 
 <div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <%# <a href="#"><i class="fab fa-facebook"></i></a> %>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-  </div>
   <div class="footer-copyright container">
-    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
+    © 2021 MEC, Inc.
   </div>
 </div>

@@ -1,11 +1,18 @@
 // Specific CSS for your home-page
-.navbar {
-  background-color: rgb(118, 248, 118);
-}
 
 .main {
   padding-left: 450px;
   padding-top: 45px;
+}
+
+#home-image {
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  position: relative;
+  top: 0px;
 }
 
 .footer {
@@ -39,10 +46,6 @@
   padding: 23px;
   margin-left: 450px;
   border-radius: 25px;
-}
-
-.monkey-logo {
-  width: 60px;
 }
 
 .cards {
