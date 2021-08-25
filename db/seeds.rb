@@ -8,7 +8,7 @@ photos = [
   "https://static.wixstatic.com/media/ba8560_6fe32414afc242aa8d3668f55dc2eaee~mv2.jpg/v1/fill/w_926,h_926,q_90/ba8560_6fe32414afc242aa8d3668f55dc2eaee~mv2.jpg",
   "https://lh4.googleusercontent.com/PRAqghnzsjTSa8lK6Q5Wpai0ycZuwwzsgB88dQ_ks_0xaI_KCOem4LspPViYjAhM3YNo0L449CB_qHkqwx5cLMQjDA91igLOypgaZVGgFb00exT2L7O05quVP-g_t0HsdQ=s412",
   "http://www.thetropicalrainforestpreserve.com/monkeys/wp-content/gallery/monkeys/monkey-for-sale-0006.jpg",
-  "https://kuwaitlocal.com/img/Classified/12365/pets-animals-0-21-01-31-06-01-41.jpeg",
+  "http://pasopacifico.org/wp-content/uploads/2020/12/2424561636_e5fa3a7b95_o-copy-1024x682.jpg",
   "https://i.pinimg.com/736x/40/d9/44/40d94482e0e1e8707cfb63c10ebb02d0.jpg",
   "https://static.wixstatic.com/media/ba8560_7b2f4414a6494a62ac6f908b6eb0d904~mv2.jpg/v1/fill/w_926,h_926,q_90/ba8560_7b2f4414a6494a62ac6f908b6eb0d904~mv2.jpg",
   "https://s.hdnux.com/photos/31/57/14/6746929/3/rawImage.jpg",
