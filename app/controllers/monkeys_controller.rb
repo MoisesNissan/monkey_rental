@@ -1,10 +1,17 @@
 class MonkeysController < ApplicationController
   def my_monkeys
-    #@monkeys = current_user.monkeys
+    @monkeys = current_user.monkeys
   end
 
   def index
     @monkeys = Monkey.all
+    @markers = @monkeys.geocoded.map do |monkey|
+      {
+        lat: monkey.lat,
+        lng: monkey.lng,
+        info_window: render_to_string(partial: "info_window", locals: { monkey: monkey })
+      }
+    end
   end
 
   def show
