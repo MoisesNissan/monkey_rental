@@ -8,7 +8,7 @@
           <%= f.input :species %>
           <%= f.input :age %>
           <%= f.input :weight, label: "Weight (kg)"%>
-          <%= f.input :address%>
+          <%= f.input :address, as: :string%>
           <%= f.input :price, label: "Price ($)"  %>
           <%= f.input :photo, as: :file %>
           <%= f.submit class: 'btn btn-primary' %>
