@@ -1,10 +1,10 @@
 <div class="cover mb-4 d-flex align-items-center justify-content-center">
   <div class="mt-5" class="text-center text-white">
-    <h1>List of monkeys</h1>
+    <h1>Choose a monkey!</h1>
     <h3 class="typed-js"></h3>
   </div>
 </div>
-<div class="container mt-5 text-center">
+<div class="container mt-1 text-center">
   <%= form_tag monkeys_path, method: :get do %>
     <%= text_field_tag :query,
       params[:query],
@@ -14,12 +14,6 @@
     %>
     <%= submit_tag "Search", class: "btn btn-primary" %>
   <% end %>
-</div>
-<div class="container py-5">
-  <div class="d-flex align-items-center justify-content-between mb-3">
-    <h3 class="mb-0">My monkey rentals</h3>
-    <%= link_to 'Add a monkey', new_monkey_path, class: 'btn btn-flat' %>
-  </div>
 </div>
 
 <div class="main-container">
