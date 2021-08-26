@@ -1,16 +1,33 @@
+      <div class="container text-center pt-3">
+        <h4 id="confirm-header">You have booked <%= @rental.monkey.name %>!</h4>
+        <h5>From <%= @rental.start_date %> to <%= @rental.end_date %></h5>
 
-            <div class = "confirm-div text-center mt-5">
-              <h2 id="confirm-header">You have booked <%= @rental.monkey.name %>!</h2>
-              <h3>From <%= @rental.start_date %> to <%= @rental.end_date %></h3>
-              <h3><%= @rental.monkey.species %></h3>
-              <h3>$<%= @rental.monkey.price %></h3>
-
-              <%= cl_image_tag("https://res.cloudinary.com/da9g2ny3q/image/upload/v1630011652/monkey_wave_utwbii.png",
-                width: 260, height: 195, crop: :fill, class: "monkey-icon") %>
-
-              <%= link_to 'Browse Other Monkeys', monkeys_path, class: 'btn btn-primary', id: "monkey-browse" %>
-
-              <%= link_to 'My Monkeys', about_path, class: 'btn btn-primary', id: "monkey-list" %>
-
-
+      </div>
+        <div class="confirmation-card container">
+          <div class="card-trip">
+            <% if @rental.monkey.photo.attached? %>
+              <a href="<%= monkey_path(@rental.monkey)%>">
+                <%= cl_image_tag @rental.monkey.photo.key %>
+              </a>
+            <% else %>
+              <a href="<%= monkey_path(@rental.monkey)%>">
+                <img src="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80" />
+              </a>
+            <% end %>
+            <div class="card-trip-infos">
+              <div>
+                <h2><%= link_to @rental.monkey.name, monkey_path(@rental.monkey) %></h2>
+                <p>Species: <%= @rental.monkey.species %> </p>
+                <p>Age: <%= @rental.monkey.age %></p>
+                <p>Weight: <%= @rental.monkey.weight %> </p>
+              </div>
+              <h2 class="card-trip-pricing"> $ <%= @rental.monkey.price %></h2>
             </div>
+          </div>
+        </div>
+
+        <div class="container text-center">
+          <%= link_to "Browse other monkeys", monkeys_path, class: "btn btn-primary" %>
+          <%= link_to "My monkeys", about_path, class: "btn btn-primary" %>
+
+        </div>

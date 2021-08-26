@@ -19,6 +19,9 @@
 <div class="main-container">
   <div class="row">
     <div class="cards col-8">
+    <% if @monkeys.empty? %>
+      <h1 class="text-center">Sorry we did not find any monkeys</h1>
+    <% end %>
       <% @monkeys.each do |monkey| %>
           <div class="card-trip">
             <% if monkey.photo.attached? %>
