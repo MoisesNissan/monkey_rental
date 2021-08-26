@@ -4,7 +4,11 @@ class MonkeysController < ApplicationController
   end
 
   def index
-    @monkeys = Monkey.all
+    if params[:query].present?
+      @monkeys = Monkey.global_search(params[:query])
+    else
+      @monkeys = Monkey.all
+    end
     @markers = @monkeys.geocoded.map do |monkey|
       {
         lat: monkey.lat,
