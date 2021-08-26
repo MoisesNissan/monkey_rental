@@ -1,3 +1,26 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "my_monkey";
+
+
+#index-search {
+  display: inline;
+  content: center;
+  width: 50%;
+}
+
+.mb-0 {
+  color:gray;
+}
+
+h1 {
+  color:gray;
+}
+
+h2 {
+  color: green;
+}
+
+h3 {
+  color:grey
+}
