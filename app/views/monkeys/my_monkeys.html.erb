@@ -1,0 +1,33 @@
+<div class="cover mb-4 d-flex align-items-center justify-content-center">
+  <div class="text-center text-white">
+    <h3 class="typed-js"></h3>
+  </div>
+</div>
+<div class="container py-5">
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <h3 class="rentals">My Monkey Rentals</h3>
+    <%= link_to 'Add a monkey', new_monkey_path, class: 'btn btn-primary btn'  %>
+  </div>
+</div>
+<div class="container">
+  <div class="cards">
+    <% @monkeys.each do |monkey| %>
+        <div class="card-trip">
+          <% if monkey.photo.attached? %>
+            <%= cl_image_tag monkey.photo.key %>
+          <% else %>
+            <img src="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80" />
+          <% end %>
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= link_to monkey.name, monkey_path(monkey) %></h2>
+              <p>Species: <%= monkey.species %> </p>
+              <p>Age: <%= monkey.age %></p>
+              <p>Weight: <%= monkey.weight %> </p>
+            </div>
+            <h2 class="card-trip-pricing"> $ <%= monkey.price %></h2>
+          </div>
+        </div>
+    <% end %>
+  </div>
+</div>
