@@ -2,7 +2,26 @@
   <div class="container">
   <h1>Monkey Rentals brings <strong>the best monkeys</strong> to <strong>the most cool people</strong>!</h1>
     <p>Change your life and rent some of the best monkeys around the world.</p>
-    <%= link_to 'Search', monkeys_path, class: 'btn btn-primary btn btn-primary btn-lg'%>
+
+
+    <%# <div class="input-group">
+      <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+        aria-describedby="search-addon" />
+      <button type="button" class="btn btn-outline-primary">search</button>
+    </div> %>
+
+  <%= form_tag monkeys_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a movie"
+    %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+
+<% end %>
+
+
+    <%# <%= link_to 'Search', monkeys_path, class: 'btn btn-primary btn btn-primary btn-lg'%>
   </div>
 </div>
 
