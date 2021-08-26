@@ -14,7 +14,8 @@
     <%= text_field_tag :query,
       params[:query],
       class: "form-control",
-      placeholder: "Find a movie"
+      id: "home-search",
+      placeholder: "Rent a monkey, fool!"
     %>
   <%= submit_tag "Search", class: "btn btn-primary" %>
 
@@ -22,11 +23,5 @@
 
 
     <%# <%= link_to 'Search', monkeys_path, class: 'btn btn-primary btn btn-primary btn-lg'%>
-  </div>
-</div>
-
-<div class="footer">
-  <div class="footer-copyright container">
-    © 2021 MEC, Inc.
   </div>
 </div>

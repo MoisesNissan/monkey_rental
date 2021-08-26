@@ -2,3 +2,37 @@
 @import "home";
 @import "my_monkey";
 @import "confirmation"
+
+#index-search {
+  display: inline;
+  content: center;
+  width: 50%;
+}
+
+.mb-0 {
+  color:gray;
+}
+
+h1 {
+  color:gray;
+}
+
+h2 {
+  color: green;
+}
+
+h3 {
+  color:grey
+}
+
+.form-control {
+  margin: 25px;
+}
+
+.justify-content-center {
+  margin: 5px;
+}
+
+.card-trip {
+  border-radius: 10px;
+}
