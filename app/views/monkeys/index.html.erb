@@ -27,9 +27,13 @@
       <% @monkeys.each do |monkey| %>
           <div class="card-trip">
             <% if monkey.photo.attached? %>
-              <%= cl_image_tag monkey.photo.key %>
+              <a href="<%= monkey_path(monkey)%>">
+                <%= cl_image_tag monkey.photo.key %>
+              </a>
             <% else %>
-              <img src="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80" />
+              <a href="<%= monkey_path(monkey)%>">
+                <img src="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1355&q=80" />
+              </a>
             <% end %>
             <div class="card-trip-infos">
               <div>
