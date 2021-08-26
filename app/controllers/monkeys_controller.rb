@@ -1,6 +1,10 @@
 class MonkeysController < ApplicationController
   def my_monkeys
-    @monkeys = current_user.monkeys
+    if current_user.monkeys.empty?
+      @monkeys = current_user.rented_monkeys
+    else
+      @monkeys = current_user.monkeys
+    end
   end
 
   def index

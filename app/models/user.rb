@@ -5,4 +5,14 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :monkeys, dependent: :destroy
   has_many :rentals, dependent: :destroy
+
+  def rented_monkeys
+    rentals = self.rentals
+    monkeys = []
+    rentals.each do |rental|
+      monkeys << rental.monkey
+    end
+
+    return monkeys
+  end
 end

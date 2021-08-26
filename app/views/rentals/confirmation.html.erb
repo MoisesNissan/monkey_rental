@@ -1,0 +1,16 @@
+
+            <div class = "confirm-div text-center mt-5">
+              <h2 id="confirm-header">You have booked <%= @rental.monkey.name %>!</h2>
+              <h3>From <%= @rental.start_date %> to <%= @rental.end_date %></h3>
+              <h3><%= @rental.monkey.species %></h3>
+              <h3>$<%= @rental.monkey.price %></h3>
+
+              <%= cl_image_tag("https://res.cloudinary.com/da9g2ny3q/image/upload/v1630011652/monkey_wave_utwbii.png",
+                width: 260, height: 195, crop: :fill, class: "monkey-icon") %>
+
+              <%= link_to 'Browse Other Monkeys', monkeys_path, class: 'btn btn-primary', id: "monkey-browse" %>
+
+              <%= link_to 'My Monkeys', about_path, class: 'btn btn-primary', id: "monkey-list" %>
+
+
+            </div>

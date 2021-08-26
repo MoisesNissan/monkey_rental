@@ -6,13 +6,19 @@ class RentalsController < ApplicationController
     @rental.monkey = @monkey
     if @rental.save
       # TODO: SEND TO USER RENTALS or SUCCESS PAGE
-      redirect_to monkeys_path, notice: "Your monkey has been successfully booked!"
+      redirect_to confirm_path(@rental)
     else
       render "monkeys/show"
     end
   end
 
+  def confirmation
+    @rental = Rental.find(params[:format])
+  end
+
   private
+
+
 
   def rental_params
     params.require(:rental).permit(:start_date, :end_date)
