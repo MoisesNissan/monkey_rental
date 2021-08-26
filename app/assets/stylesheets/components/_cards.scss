@@ -43,6 +43,11 @@
   grid-gap: 16px;
 }
 
+.main-container {
+  margin-left: 16px;
+  margin-right: 16px !important;
+}
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
