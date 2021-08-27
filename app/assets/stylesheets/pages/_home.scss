@@ -16,13 +16,22 @@
 }
 
 .footer {
-  background: #F4F4F4;
+  background: #7e7b7b;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
+  height: 40px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
+     position:absolute;
+     bottom:0px;
+     left:0px;
+     right:0px;
+     height: 2.5em ;
+     width:100%;
+     opacity: .5;
+     background-color: #F4F4F4;
+
 }
 .footer-links {
   display: flex;
@@ -82,4 +91,13 @@ h1 {
     background-color: rgb(204, 255, 181);
     border-color: rgb(204, 255, 181);
   color: #443737;
+}
+
+.page-content {
+  position: relative ;
+  min-height: 100vh ;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
 }
