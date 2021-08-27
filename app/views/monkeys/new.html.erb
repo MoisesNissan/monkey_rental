@@ -4,12 +4,12 @@
       <div class="bg-white rounded p-3 shadow">
         <h3>Add a new monkey</h3>
         <%= simple_form_for @monkey do |f| %>
-          <%= f.input :name %>
-          <%= f.input :species %>
-          <%= f.input :age %>
-          <%= f.input :weight, label: "Weight (kg)"%>
-          <%= f.input :address, as: :string%>
-          <%= f.input :price, label: "Price ($)"  %>
+          <%= f.input :name, class:"add-monkey-input"%>
+          <%= f.input :species, class:"add-monkey-input"%>
+          <%= f.input :age, class:"add-monkey-input"%>
+          <%= f.input :weight, label:"Weight (kg)", class:"add-monkey-input"%>
+          <%= f.input :address, as: :string, class:"add-monkey-input"%>
+          <%= f.input :price, label: "Price ($)", class:"add-monkey-input" %>
           <%= f.input :photo, as: :file %>
           <%= f.submit class: 'btn btn-primary' %>
         <% end %>
