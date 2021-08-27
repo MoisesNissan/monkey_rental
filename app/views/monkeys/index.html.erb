@@ -35,7 +35,7 @@
             <% end %>
             <div class="card-trip-infos">
               <div>
-                <h2><%= link_to monkey.name, monkey_path(monkey) %></h2>
+                <h2><%= link_to monkey.name, monkey_path(monkey), class: "name-color" %></h2>
                 <p>Species: <%= monkey.species %> </p>
                 <p>Age: <%= monkey.age %></p>
                 <p>Weight: <%= monkey.weight %> </p>
