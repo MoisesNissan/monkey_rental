@@ -33,7 +33,7 @@
           <%= simple_form_for([@monkey, @rental]) do |f| %>
             <%= f.input :start_date, html5: true, as: :date %>
             <%= f.input :end_date, html5: true, as: :date %>
-            <%= f.submit "Book Monkey!"%>
+            <%= f.submit "Book Monkey!", class:"btn btn-primary"%>
           <% end %>
         </div>
         </div>
